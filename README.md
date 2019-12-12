@@ -80,7 +80,8 @@ pet-test.js  pet-{petId}-uploadImage-test.js  user-test.js
 
 ### Using the result
 
-The resulting test files are built using the [mocha](https://mochajs.org/) testing framework and [chakram](http://dareid.github.io/chakram/) API testing framework. Thus, you will need both of these dependencies installed in order to run your newly generated tests.
+The resulting test files are built using the [cypress snapshot](https://www.cypress.io/blog/2018/01/16/end-to-end-snapshot-testing/) 
+
 
 After installing these, you can run the tests with mocha:
 ```
