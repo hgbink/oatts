@@ -1,16 +1,16 @@
 {
   "name": "oatts-cypress",
-  "version": "1.0.3",
-  "description": "An Open API Test Template Generator",
+  "version": "1.0.4",
+  "description": "An Open API Cypress Test Template Generator",
   "keywords": [
     "Swagger",
     "OpenAPI",
-    "Test",
-    "API"
+    "Cypress",
+    "Snapshot"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/oatts.git"
+    "url": "https://github.com/hgbink/oatts"
   },
   "main": "index.js",
   "bin": {
@@ -20,7 +20,7 @@
     "gen-docs": "./node_modules/.bin/jsdoc -c jsdoc.config.json .",
     "test": "mocha --recursive"
   },
-  "author": "Noah Dietz",
+  "author": "Chao Bi",
   "license": "Apache-2.0",
   "dependencies": {
     "commander": "^2.20.0",
