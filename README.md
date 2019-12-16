@@ -1,36 +1,35 @@
 [![Build Status](https://travis-ci.org/google/oatts.svg?branch=master)](https://travis-ci.org/google/oatts)
 
-# OpenAPI Test Templates (oatts)
+# OpenAPI Test Templates for cypress (oatts-cypress)
 
-> Generate basic unit test scaffolding for your [OpenAPI specification](https://www.openapis.org/).
+> Generate basic cypress snapshot test scaffolding for your [OpenAPI specification](https://www.openapis.org/).
 
 ## Disclaimer
-This is not an officially supported Google product.
 
-`oatts` is based off of the [swagger-test-templates](https://github.com/apigee-127/swagger-test-templates) module and the lessons learned during its development.
+`oatts-cypress` is based off of the [oatts](https://github.com/google/oatts) module and the lessons learned during its development.
 
 _This is a work in progress._
 
 ## Goal
 
-The goal of `oatts` is to provide a standalone module for generating Node.js unit test code scaffolding based on a given OpenAPI specification.
+The goal of `oatts-cypress` is to provide a standalone module for generating cypress snapshot test code scaffolding based on a given OpenAPI specification.
 
 The hope is that by providing such a tool, API developers will be encouraged to test the contract between their spec and backend early, often and continuously as the project grows.
 
 ## Usage
 
-There are a couple ways to use `oatts`.
+There are a couple ways to use `oatts-cypress`.
 
 ### Module
 
 Install via `npm`
 
-    npm install --save oatts
+    npm install --save oatts-cypress
 
 
 Then use it in code
 ```js
-var oatts = require('oatts');
+var oatts = require('oatts-cypress');
 
 var options = {
     // see "Options" section below for available options
@@ -45,7 +44,7 @@ console.log(tests)
 
 Install globally via `npm`
 
-    npm install -g oatts
+    npm install -g oatts-cypress
 
 
 Then use in your command line
@@ -80,25 +79,9 @@ pet-test.js  pet-{petId}-uploadImage-test.js  user-test.js
 
 ### Using the result
 
-The resulting test files are built using the [mocha](https://mochajs.org/) testing framework and [chakram](http://dareid.github.io/chakram/) API testing framework. Thus, you will need both of these dependencies installed in order to run your newly generated tests.
+The resulting test files are built using the [cypress snapshot](https://www.cypress.io/blog/2018/01/16/end-to-end-snapshot-testing/) 
 
-After installing these, you can run the tests with mocha:
-```
-# start your API server to test against!!
-> mocha --recursive <test directory>
-
-
-    tests for /goodbye
-        tests for get
-            ✓ should respond 200 for "Success" (57ms)
-
-    tests for /hello
-        tests for get
-            ✓ should respond 200 for "Success"
-
-
-    2 passing (82ms)
-```
+Please follow the above link to setup your cypress project after generating the tests
 
 ### Custom Values
 Custom values can be supplied through both the command line and a JSON file. The in-line, command line supplied JSON will take precedent.
@@ -146,18 +129,9 @@ To test this module simply use the `npm` script
 
     npm test
 
-## Discussion
-
-If you have a question or a topic you'd like to discuss, please feel free to open
-a discussion on our Google Group [oatts-users](https://groups.google.com/forum/#!forum/oatts-users/).
-
 ## Contributing
 
 Contributors are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Copyright
-
-Copyright 2018, Google Inc.
 
 ## License
 
